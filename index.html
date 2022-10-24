@@ -2,52 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="/script.js"></script>
-    <link rel="stylesheet" href="/css/normalize.css">
+    <title>Glidesjs</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <!-- <script>
-        alert("From HEAD: " + document.body); // null, there's no <body> yet
-    </script> -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
 </head>
 
 <body>
-    <!-- <div class="box">
-        <h2>JavaScript</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis magni optio reprehenderit tempore modi
-            temporibus,
-            iste est nisi quae repudiandae?</p> -->
-
-    <!-- <img id="image" src="/images/image-product-4.jpg" alt="">
+    <div class="container">
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide">0</li>
+                    <li class="glide__slide">1</li>
+                    <li class="glide__slide">2</li>
+                </ul>
+            </div>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+        </div>
     </div>
-    <script>
-        document.getElementById('image').src = "/images/image-product-1.jpg"
-        setTimeout(() => document.getElementById.style.image = "", 3000);
-    </script> -->
 
-    <!-- <input type="text" id="Text" placeholder="type here"> -->
-    <!-- <p id="demo">Happy Birthday</p> -->
-    <!-- <button id="demo">Click Me</button> -->
-    <!-- <h2>The truth about elk</h2>
-    <ol>
-        <li>elk are smart</li>
-        <li>elk are friendly</li>
-    </ol> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+
     <script>
-        alert("From BODY: " + document.body); // HTMLBodyElement, now it exists
-    </script>
-    <script>
-        // document.getElementById("Text").placeholder = "Input your name"
-        // document.getElementById("demo").style.color = "white"
-        // document.getElementById("demo").style.fontSize = "90px"
-        // document.getElementById("demo").style.fontStyle = "italic"
-        // document.getElementById("demo").style.fontWeight = "bold"
-        // document.getElementById("demo").style.textDecoration = "underline"
-        // document.getElementById("demo").style.textTransform = "uppercase"
-        // document.getElementById("demo").addEventListener("click", myFunction);
+        new Glide('.glide').mount()
     </script>
 </body>
 
